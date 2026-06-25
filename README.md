@@ -1,2 +1,7 @@
 # OpenRigolDS5000SeriesUSBDriver
-Open source reverse engineered USB driver/protocol for Rigol DS5000 series
+Open source reverse engineered USB driver/protocol for Rigol DS5000 series using libusb
+
+I have a RIGOL DS5022M oscilloscope but recently it's LCD died but I needed a oscilloscope for my homework so I thought it is a great weekend project since I can't continue to my homework without a oscilloscope.
+
+# Understanding USB protocol
+Not like any other scientific instrument, DS5000 series don't use USBTMC to communicate with a computer via USB, instead it uses pure bulk transfers. Using bulk transfers you can change time/div, volts/div, offsets and many other just like you are using it but through a computer. So I thought there should be a software for it and yes I was right but it was only available for Windows95/98 and XP. I created a XP virtual machine and installed the driver and the software(I included it in the repo, I ripped it from the CD that came with the device) then used a software called "SnoopyPro" to read USB protocol, log files included. The device uses bulk transfers to setup. First, driver sends some commands to initialize the device and gets the device name. After that, driver sends the parameters such as volts/div and starts to capture the screen. Device sends 320*240px image as raw data stream, it is technically capable of color image even though the screen is monochrome. Screen capture cli is capable of sending parameters and receiving the screen capture, it has no frontend for now but there will be a frontend that looks like the front panel of the device, cli is only capable of screenshots, no live screen for now but it will be implamented in to frontend. It is far frome being complete but it is the first step.

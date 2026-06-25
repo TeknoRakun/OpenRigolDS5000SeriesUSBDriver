@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<Foundry>
+<VM>
+<VMId type="string">52 c6 00 18 58 06 98 d8-d8 e9 c5 ed 60 92 d2 a9</VMId>
+<ClientMetaData>
+<clientMetaDataAttributes/>
+<HistoryEventList/></ClientMetaData>
+<vmxPathName type="string">Other Linux 5.x kernel 64-bit.vmx</vmxPathName></VM><tools-install-info><installError>21004</installError><updateCounter>1</updateCounter></tools-install-info></Foundry>
